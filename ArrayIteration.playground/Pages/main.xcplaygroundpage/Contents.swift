@@ -15,7 +15,7 @@
  */
 // write your code here
 
-
+let shoppingCart:[String] = ["Chips", "Salsa", "Guacamole", "Red Wine"]
 
 
 
@@ -25,7 +25,7 @@
  */
 // write your code here
 
-
+let numbersList:[Int] = [1, 2, 3, 4 ,5 ,6 ,7 ,8 ,9 ,10]
 
 
 
@@ -35,6 +35,10 @@
  ### 3. Take the list of numbers you created in question 2 and print their values in the most efficient way possible.
  */
 // write your code here
+
+for number in numbersList{
+    print(number)
+}
 
 
 
@@ -47,7 +51,15 @@
  */
 // write your code here
 
-
+for food in shoppingCart{
+    
+    if food == "Red Wine"{
+        print("Glug, glug, glug \(food).")
+    }else{
+    print("Yum, \(food)!")
+    }
+    
+}
 
 
 
@@ -58,8 +70,13 @@
  */
 // write your code here
 
+func printFood(food: String){
+    print("Yum, \(food)!")
+}
 
-
+for food in shoppingCart {
+    printFood(food)
+}
 
 
 
@@ -69,9 +86,16 @@
  */
 // write your code here
 
+func greet(names: [String]){
+    for name in names{
+        if name == "Michael" {
+            printFood("Top of the morning \(name)!")
+        }
+        printFood("Good morning \(name)!")
+    }
+}
 
-
-
+greet(shoppingCart)
 
 
 /*: question7
@@ -79,7 +103,19 @@
  */
 // write your code here
 
+let intArray = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
+func intsLessThan50(array:[Int]) -> [Int]{
+    var numbersLessThan50 = [Int]()
+    for number in array {
+        if number < 50 {
+            numbersLessThan50.append(number)
+        }
+    }
+    return numbersLessThan50
+}
+
+intsLessThan50(intArray)
 
 
 
